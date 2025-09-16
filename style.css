@@ -1,3 +1,8 @@
+:root{
+  --contentColor1: #EFF5D2;
+  --contentColor2: #C6D870;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,58 +10,134 @@ body {
   color: #333;
 }
 
-/* Use flexbox to align sidebar + main content */
-.container {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* Sidebar styling */
-.sidebar {
-  width: 200px;
-  background: #556B2F;
-  color: #fff;
-  padding: 1rem;
-}
-
-.sidebar h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  margin-left: 1rem;
-}
-
-.sidebar ul {
-  font-size: 1.5rem;
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #556B2F;
+  height: 64px;
   list-style: none;
-  margin-top: 0.5rem;
-  padding-left: 0;
-  margin-left: 1rem;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  /* flexbox makes items horizontal */
+  justify-content: left;
+  align-items: center;
+  /* vertical centering */
+
+  position: fixed;
+  top: 0;
 }
 
-.sidebar ul li {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.navbar ul {
+  list-style: none;
+  /* remove bullets */
+  margin-left: 2rem;
+  padding: 0;
+
+  display: flex;
+  /* makes list items horizontal */
 }
 
-.sidebar ul li a {
-  color: #ccc;
+.navbar li {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+}
+
+.navbar a {
   text-decoration: none;
-  transition: color 0.2s;
+  color: white;
 }
 
-.sidebar ul li a:hover {
-  color: #fff;
+.navbar a:hover {
+  text-decoration: underline;
 }
 
-/* Main content */
+/* Hero panel */
+.heroPanel {
+  width: 100%;
+  height: 100vh;
+  background-color: #8FBC8F;
+  margin-top: 64px;
+  /* to avoid being hidden under navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.contentPanel {
+  width: 100%;
+  min-width: 100%;
+  height: min(100vh,1000px);
+  background-color: #EFF5D2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*overflow-x: hidden;*/
+}
+
+.contentPanel .textPanel {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+  padding-left: 3.36vw;
+  padding-top: 7.27vh;
+  padding-right: 3.36vw;
+
+  box-sizing: border-box;
+  max-width: 50vw;
+}
+
+.contentPanel h1 {
+  font-size: 2.25vw;
+  margin-top: 0;
+}
+
+.contentPanel p {
+  font-size: max(1.25vw, 1.25vh);
+  line-height: 1.6;
+  max-height: 100%;
+  text-align: justify;
+}
+
+.contentPanel .imagePanel {
+  padding-top: 7.27vh;
+  padding-left: 3.36vw;
+  padding-right: 2vw;
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1 1 50%;
+
+  box-sizing: border-box;
+  max-width: 50vw;
+  max-height: 80%;
+}
+
+.contentPanel .imagePanel img {
+  width: 100%;
+  /* never exceed container width */
+  height: auto;
+  /* allow shrinking */
+  display: block;
+  object-fit: cover;
+}
+
+/* Main content /
 .content {
   flex: 1;
   padding: 2rem;
+  margin-left: 4rem;
+}
+
+.content h1 {
+  font-size: 2.7rem;
 }
 
 .content p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   max-width: 75ch;
   text-align: justify;
-}
+}*/
