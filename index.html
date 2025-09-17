@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/landingStyle.css">
 </head>
 
 <body>
@@ -13,18 +14,27 @@
         <div class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <!--href="projects.html"-->
+                <li><a >Projects</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </div>
 
         <main>
             <!-- Hero panel -->
             <div class="heroPanel">
-
+                <div class="heroOverlay">
+                    <div class="heroContent">
+                        <h1>Jeremy James Tan</h1>
+                        <p>
+                            Software Developer | Game Enthusiast | Lifelong Learner
+                        </p>
+                        <div class="heroButton"><a href="#first">Learn more about me</a></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="contentPanel" style="background-color: var(--contentColor1);">
+            <div class="contentSection" style="background-color: var(--contentColor1);" id="first">
                 <!-- Left text -->
                 <div class="textPanel">
                     <h1>Hello!</h1>
@@ -49,6 +59,27 @@
                     <img src="images/project1.png" alt="Hello">
                 </div>
             </div>
+
+            <!-- Footer -->
+            <div class="footer" id="footer">
+                <div class="contacts">
+                    <h1>Get in touch</h1>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/james-tan-596209385/"><img src="images/linkedIn.png" alt="" class="icon"> linkedIn</a></li>
+                        <li><a href="https://github.com/jrjm-t"><img src="images/github.png" alt="" class="icon"> github</a></li>
+                        <li><a onclick="copyText('james.tan1243@gmail.com'); return false;"><img src="images/gmail.png" alt="" class="icon"> james.tan1243@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="quickLinks">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <script src="javascript/clipboard.js"></script>
         </main>
     </div>
 </body>
